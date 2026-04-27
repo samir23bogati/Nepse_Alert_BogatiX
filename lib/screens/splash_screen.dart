@@ -10,7 +10,8 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     );
 
     _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.outBack),
+      CurvedAnimation(parent: _controller, curve: Curves.elasticOut),
     );
 
     _controller.forward();
@@ -37,8 +38,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       if (mounted) {
         Navigator.of(context).pushReplacement(
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const HomeScreen(),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            pageBuilder: (context, animation, secondaryAnimation) =>
+                const HomeScreen(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
               return FadeTransition(opacity: animation, child: child);
             },
             transitionDuration: const Duration(milliseconds: 800),

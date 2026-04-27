@@ -13,7 +13,7 @@ class NepseApiService {
   // After deploying: npm i -g vercel && vercel in nepse-api folder
   // Then update the URL below with your Vercel project URL
   static const String _customApiBase =
-      'https://YOUR-VERCEL-PROJECT.vercel.app/api';
+      'https://nepse-alert-bogati-x.vercel.app/api';
   static bool _useCustomApi = true; // Set to true after deployment
 
   static final NepseApiService _instance = NepseApiService._internal();

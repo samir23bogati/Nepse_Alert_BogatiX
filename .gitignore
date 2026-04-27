@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+node_modules/
+*.log
+.env
+.DS_Store
+=======
 # Miscellaneous
 *.class
 *.log
@@ -43,3 +49,4 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+>>>>>>> a386100551dc5c7e27b303b6959491523e33feeb

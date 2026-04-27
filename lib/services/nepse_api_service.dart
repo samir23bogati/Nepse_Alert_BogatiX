@@ -9,10 +9,12 @@ class NepseApiService {
   static const String _sharesansarBase = 'https://www.sharesansar.com';
   static const String _merolaganiBase = 'https://merolagani.com';
 
-  // Custom API (deploy to Render.com for free)
-  // Replace this with your deployed Render URL after deployment
-  static const String _customApiBase = 'https://your-app-name.onrender.com/api';
-  static bool _useCustomApi = false; // Set to true after deployment
+  // Custom API (deploy to Vercel for free)
+  // After deploying: npm i -g vercel && vercel in nepse-api folder
+  // Then update the URL below with your Vercel project URL
+  static const String _customApiBase =
+      'https://YOUR-VERCEL-PROJECT.vercel.app/api';
+  static bool _useCustomApi = true; // Set to true after deployment
 
   static final NepseApiService _instance = NepseApiService._internal();
   factory NepseApiService() => _instance;
